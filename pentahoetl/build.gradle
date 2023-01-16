@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files('/home/bade/Downloads/kettle-engine-7.0.0.4-72.jar')
+    implementation files('/home/bade/Downloads/kettle-core-7.1.0.5-72.jar')
+    implementation files('/home/bade/Downloads/metastore-9.3.0.0-433.jar')
+
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'org.apache.commons:commons-vfs2:2.9.0'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
