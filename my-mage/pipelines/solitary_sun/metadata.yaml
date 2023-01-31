@@ -1,0 +1,30 @@
+blocks:
+- all_upstream_blocks_executed: true
+  configuration: {}
+  downstream_blocks:
+  - nameless_filter
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: raw data
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: raw_data
+- all_upstream_blocks_executed: true
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: nameless filter
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - raw_data
+  uuid: nameless_filter
+data_integration: null
+name: solitary sun
+type: python
+uuid: solitary_sun
+widgets: []
